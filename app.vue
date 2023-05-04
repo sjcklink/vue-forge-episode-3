@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const temperature = ref(40)
+</script>
+
 <template>
   <div class="max-w-full w-[900px] m-auto">
     <NuxtErrorBoundary>
@@ -14,18 +18,18 @@
         </div>
 
         <input
+          v-model="temperature"
           type="range"
           min="0"
           max="100"
-          value="40"
           class="range range-secondary"
         />
-        <span>explanatory text</span>
+        <span>Temperature: {{ temperature < 50 ? '0 - ' : '1 - More random, creative and risky' }}</span>
 
         <!-- card Twitter -->
         <div class="card w-full border-t-4 border-t-purple-600 shadow-xl mt-10">
           <div class="card-body">
-            <h2 class="card-title border-b-2 border-b-gray-200">Card title!</h2>
+            <h2 class="card-title border-b-2 border-b-gray-200">Twitter</h2>
             <p class="border-2 border-blue-200 my-3">If a dog chews shoes whose shoes does he choose?</p>
             <div class="card-actions flex items-center justify-between">
               <div>character count:</div>

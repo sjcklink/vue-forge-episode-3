@@ -21,7 +21,7 @@ const postURL = computed(
     :state="state"
     :body="firstMessage?.content.trim()"
     @update:body="firstMessage ? (firstMessage.content = $event) : null"
-    class="mb-10"
+    
   >
     <div
       v-if="firstMessage?.content.trim()"

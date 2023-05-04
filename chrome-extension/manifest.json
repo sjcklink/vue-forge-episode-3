@@ -1,10 +1,19 @@
 {
-    "name": "Hello Extensions",
+    "name": "Social Media Post Generator",
     "description": "Base Level Extension",
     "version": "1.0",
     "manifest_version": 3,
     "action": {
-      "default_popup": "hello.html",
-      "default_icon": "hello_extensions.png"
-    }
+      "default_popup": "popup.html",
+      "default_icon": "icon48.png",
+    "permissions": [
+        "activeTab",
+        "tabs"
+      ]
+    },
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
   }
